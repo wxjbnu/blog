@@ -11,7 +11,7 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="zh-CN">
+<html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -114,7 +114,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						{
 							updatedDate && (
 								<span class="last-updated">
-									（更新于 <FormattedDate date={updatedDate} />）
+									（Updated on <FormattedDate date={updatedDate} />）
 								</span>
 							)
 						}
@@ -135,7 +135,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<slot />
 					</div>
 					<a href="/blog" class="back-link">
-						← 返回文章列表
+						← ← Back to posts
 					</a>
 				</div>
 			</article>
